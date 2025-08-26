@@ -10,7 +10,8 @@ pub use error::Error;
 #[path = "opensles_snd.rs"]
 mod snd;
 
-#[cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd"))]
+// JSC - OpenBSD Support
+#[cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "openbsd"))]
 #[path = "alsa_snd.rs"]
 mod snd;
 
